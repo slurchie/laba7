@@ -9,7 +9,8 @@ namespace method_homework
 {
     class Program
     {
-        public static void SearchMail(ref string s)
+        public static void SearchMail(ref string s) //находит # и обрезает строку до неё + пробел после
+                                                    //Если вылетает ошибка, то возвращает пустую строку
         {
             int index = s.Length - 1;
             for (int i = 0; i < s.Length; i++)

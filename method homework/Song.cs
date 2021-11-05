@@ -38,15 +38,18 @@ namespace method_homework
         }
         public override bool Equals(object d)
         {
-            if (d is Song)
-            {
-                if (name != ((Song)d).name)
-                    return false;
-                if (author != ((Song)d).author)
-                    return false;
-                return true;
-            }
-            return false;
+            bool b = (d as Song).name.Equals(name)&&(d as Song).author.Equals(author);    
+
+            return b;
+            //if (d is Song)    `
+            //{
+            //    if (name != ((Song)d).name)
+            //        return false;
+            //    if (author != ((Song)d).author)
+            //        return false;
+            //    return true;
+            //}
+            //return false;
         }
     }
 }

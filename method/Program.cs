@@ -6,24 +6,32 @@ using System.Threading.Tasks;
 using System.IO;
 
 namespace method
-{ 
-        class Program
+{
+    class Program
     {
-       
-            public static string ReverseString(string input)
+
+        public static string ReverseString(string input)
         {
             return new string(input.Reverse().ToArray());
         }
-        public static void task1(string input)
+        public static void task1()
         {
             string input = Console.ReadLine();
             Console.WriteLine(ReverseString(input));
         }
         static void Main(string[] args)
         {
-            //1.2
+            //8.1
+            Console.WriteLine("8.1");
+            Bank horny = new Bank();
+            horny.PutItOnTheAccount(644);
+            Bank flower = new Bank();
+            flower.PutItOnTheAccount(10);
+            flower.Transfer(ref horny, 14);
+
+            //8.2
             task1();
-            Console.ReadKey(); 
+            Console.ReadKey();
 
             Console.WriteLine("8.3");
             Console.WriteLine("Путь к файлу:");
@@ -45,3 +53,4 @@ namespace method
         }
     }
 }
+
